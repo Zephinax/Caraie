@@ -1,2 +1,2 @@
-# CS50
+# CS50 | Persian 
 Persian Version of CS50s course
