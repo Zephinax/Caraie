@@ -15,7 +15,7 @@ this is persian dubbed version of Udemy [ Complete Python Developer in 2023 ] co
 - No previous programming experience is needed.
 - Prepare to fall in love with Python and programming!
 
-## Course Content | محتوای دوره
+## Course Content
 
 <!--ts-->
 
