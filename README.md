@@ -1,10 +1,19 @@
 # PyFa [Python Farsi]
 
-What is this course? this is persian dubbed version of Udemy [ Complete Python Developer in 2023 ] course.
+How to become a Python 3 Developer and get hired! Build 12+ projects, learn Web Development, Machine Learning + more!
+
+this is persian dubbed version of Udemy [ Complete Python Developer in 2023 ] course.
 
 [YouTube]()
 
 [Telegram]()
+
+## Requirements
+
+- A computer (Windows/Mac/Linux). That's it!
+- No prior knowledge of Python is required.
+- No previous programming experience is needed.
+- Prepare to fall in love with Python and programming!
 
 ## Course Content | محتوای دوره
 
