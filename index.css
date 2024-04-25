@@ -1,0 +1,26 @@
+/* Css Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  /* Color Variables */
+  --primary-bg: #f6f7f9;
+  --secondary-bg: #ffffff;
+  --primary-text: #1a202c;
+  --secondary-text: #90a3bf;
+  --tertiary-text: #596780;
+  --border-color: #e7eef6;
+}
+
+body {
+  background-color: var(--primary-bg);
+}
