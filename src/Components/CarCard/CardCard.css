@@ -1,0 +1,91 @@
+.card-container {
+  background-color: var(--secondary-bg);
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.025) 0px 5px 10px;
+  transition: all 0.15s linear;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@media (max-width: 590px) {
+  .card-container {
+    font-size: 18px;
+  }
+}
+
+.card-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.065) 0px 5px 10px;
+}
+
+.card-name-like {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-name {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.likeBtn {
+  padding-left: 16px;
+}
+
+.car-class {
+  color: var(--secondary-text);
+  font-size: 0.7em;
+}
+
+.car-img {
+  width: 100%;
+  max-width: 232px;
+  max-height: 72px;
+  display: block;
+  margin: 40px auto;
+}
+
+.car-detail {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-text);
+  justify-content: space-between;
+}
+
+.car-detail-wrapper {
+  display: flex;
+  gap: 4px;
+  font-size: 0.7em;
+  align-items: center;
+}
+
+.fuel-cap::after {
+  content: 'L';
+}
+
+.people-cap::after {
+  content: 'Person';
+}
+
+.car-price::before {
+  content: '$';
+}
+
+.car-price-and-rent {
+  display: flex;
+  margin-top: 16px;
+  font-size: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.car-rent-btn {
+  padding: 8px 16px;
+  border: none;
+  font-size: 0.7em;
+  border-radius: 4px;
+  color: var(--primary-bg);
+  background: var(--primary-blue);
+  cursor: pointer;
+}

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: PlusJakarta;
+  src: url('./public/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+}
+
 /* Css Reset */
 *,
 *::after,
@@ -9,18 +14,30 @@
   text-decoration: none;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+  font-family: PlusJakarta;
+  overflow-x: hidden;
 }
-
+/* Color Variables */
 :root {
-  /* Color Variables */
-  --primary-bg: #f6f7f9;
-  --secondary-bg: #ffffff;
-  --primary-text: #1a202c;
-  --secondary-text: #90a3bf;
-  --tertiary-text: #596780;
-  --border-color: #e7eef6;
+  --primary-bg: rgb(246, 247, 249);
+  --secondary-bg: rgb(255, 255, 255);
+  --primary-text: rgb(26, 32, 44);
+  --secondary-text: rgb(144, 163, 191);
+  --tertiary-text: rgb(89, 103, 128);
+  --border-color: rgb(231, 238, 246);
+  --primary-blue: rgb(53, 99, 233);
+  --secondary-blue: rgb(84, 166, 255);
 }
 
 body {
   background-color: var(--primary-bg);
+}
+
+.user-select-none {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

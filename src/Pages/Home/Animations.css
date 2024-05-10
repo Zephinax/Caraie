@@ -1,0 +1,9 @@
+@keyframes out {
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.primary-shadow {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
