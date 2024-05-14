@@ -1,0 +1,19 @@
+.recommendation-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.see-more {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: var(--primary-blue);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.see-more:hover {
+  text-decoration: underline;
+}

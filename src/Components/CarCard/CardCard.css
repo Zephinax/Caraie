@@ -60,15 +60,27 @@
 }
 
 .fuel-cap::after {
-  content: "L";
+  content: 'L';
 }
 
 .people-cap::after {
-  content: "Person";
+  content: 'Person';
 }
 
-.car-price::before {
-  content: "$";
+.car-price span::before {
+  content: '$';
+}
+
+.car-price span:nth-child(1)::after {
+  content: '/day';
+  color: var(--secondary-text);
+  font-size: 0.7rem;
+}
+
+.car-price:has(#discount) #price {
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  text-decoration: line-through;
 }
 
 .car-price-and-rent {
@@ -77,6 +89,11 @@
   font-size: 1em;
   align-items: center;
   justify-content: space-between;
+}
+
+.car-price {
+  display: flex;
+  flex-direction: column;
 }
 
 .car-rent-btn {

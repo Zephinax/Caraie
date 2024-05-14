@@ -1,0 +1,27 @@
+.popular-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.popular-slider {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .popular-container {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .popular-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .popular-slider {
+    display: block;
+  }
+}

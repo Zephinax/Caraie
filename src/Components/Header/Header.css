@@ -129,6 +129,10 @@
   transition: all 0.15s linear;
 }
 
+.mobile-header-search:has(.header-search-input:focus) {
+  border-color: var(--secondary-text);
+}
+
 @media (max-width: 750px) {
   .mobile-header-search {
     margin: 8px 48px;
