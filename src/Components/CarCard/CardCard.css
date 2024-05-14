@@ -39,7 +39,6 @@
 }
 
 .car-img {
-  width: 100%;
   max-width: 232px;
   max-height: 72px;
   display: block;
@@ -61,15 +60,15 @@
 }
 
 .fuel-cap::after {
-  content: 'L';
+  content: "L";
 }
 
 .people-cap::after {
-  content: 'Person';
+  content: "Person";
 }
 
 .car-price::before {
-  content: '$';
+  content: "$";
 }
 
 .car-price-and-rent {

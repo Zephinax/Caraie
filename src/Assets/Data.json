@@ -12,35 +12,40 @@
   "Popular": [
     {
       "id": "1",
-      "name": "mewo",
+      "name": "Koenigsegg",
       "category": "Sport",
-      "fuelCapacity": "54",
+      "fuelCapacity": "90",
       "gear": "Manual",
-      "personCapacity": "5"
+      "personCapacity": "2",
+      "img": "Koenigsegg.png",
+      "price": "99"
     },
     {
       "id": "2",
-      "name": "mewo",
+      "name": "Nissan GT-R",
       "category": "Sport",
-      "fuelCapacity": "54",
+      "fuelCapacity": "80",
       "gear": "Manual",
-      "personCapacity": "5"
+      "personCapacity": "2",
+      "img": "NissanGTR.png"
     },
     {
       "id": "3",
-      "name": "mewo",
+      "name": "Rolls - Royce",
       "category": "Sport",
-      "fuelCapacity": "54",
+      "fuelCapacity": "70",
       "gear": "Manual",
-      "personCapacity": "5"
+      "personCapacity": "4",
+      "img": "Rolls - Royce.png"
     },
     {
       "id": "4",
-      "name": "mewo",
+      "name": "CR - V",
       "category": "Sport",
-      "fuelCapacity": "54",
+      "fuelCapacity": "80",
       "gear": "Manual",
-      "personCapacity": "5"
+      "personCapacity": "6",
+      "img": "CR - V.png"
     }
   ]
 }

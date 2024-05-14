@@ -15,7 +15,7 @@
 }
 
 .ads {
-  margin-top: 90px;
+  padding-top: 105px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,16 +30,16 @@
   }
 
   .ads {
-    margin-top: 0;
+    padding-top: 0;
   }
 }
 
 .ad-card:nth-child(1) {
-  background: var(--secondary-blue) url('./../../../public/images/adBg1.png')
+  background: var(--secondary-blue) url("./../../../public/images/adBg1.png")
     no-repeat center/cover;
 }
 .ad-card:nth-child(2) {
-  background: var(--primary-blue) url('./../../../public/images/adBg2.png')
+  background: var(--primary-blue) url("./../../../public/images/adBg2.png")
     no-repeat center/cover;
 }
 
@@ -59,6 +59,9 @@
 
 .ad-card img {
   margin-top: 24px;
+  /* width: 100%;
+  max-width: 300px; */
+  width: clamp(50px, 100%, 300px);
 }
 
 .ad-content {
@@ -79,18 +82,20 @@
 
 .ad-image-container {
   display: flex;
-  align-items: center;
+  align-items: end;
+  gap: 8px;
   justify-content: space-between;
 }
 
 .ad-btn {
-  width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: end;
   height: 100%;
-  text-wrap: nowrap;
+  min-width: fit-content;
+  padding-bottom: 12px;
+  margin-right: -8px;
 }
 
 .ad-btn svg {
@@ -99,10 +104,6 @@
   width: 28px;
   margin-bottom: -4px;
 }
-
-/* .ad-card:hover .ad-btn svg {
-  animation: out 1s ease-in infinite;
-} */
 
 /* filter section */
 
@@ -282,6 +283,14 @@
 
 @media (max-width: 700px) {
   .popular-container {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .popular-container::-webkit-scrollbar {
     display: none;
   }
 

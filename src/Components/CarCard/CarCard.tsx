@@ -1,9 +1,9 @@
-import './CardCard.css';
-import { IoHeartOutline } from 'react-icons/io5';
-import { BsFuelPumpFill } from 'react-icons/bs';
-import { TbManualGearbox } from 'react-icons/tb';
-import { IoIosPeople, IoIosHeart } from 'react-icons/io';
-import { useState, memo } from 'react';
+import "./CardCard.css";
+import { IoHeartOutline } from "react-icons/io5";
+import { BsFuelPumpFill } from "react-icons/bs";
+import { TbManualGearbox } from "react-icons/tb";
+import { IoIosPeople, IoIosHeart } from "react-icons/io";
+import { useState, memo } from "react";
 
 interface cardProps {
   name: string;
@@ -11,10 +11,18 @@ interface cardProps {
   fuelCapacity: string;
   gear: string;
   personCapacity: string;
+  img: string | undefined;
 }
 
 const CarCard = memo(
-  ({ name, category, fuelCapacity, gear, personCapacity }: cardProps) => {
+  ({
+    name = "UnKnown",
+    category,
+    fuelCapacity = "UnKnown",
+    gear = "UnKnown",
+    personCapacity = "UnKnown",
+    img = "noImg.png",
+  }: cardProps) => {
     const [likeStatus, setLikeStatus] = useState(true);
 
     return (
@@ -29,20 +37,19 @@ const CarCard = memo(
                 setLikeStatus(false);
               }
             }}
-            className='likeBtn'
-          >
+            className='likeBtn'>
             {likeStatus ? (
               <IoHeartOutline size={22} />
             ) : (
-              <IoIosHeart style={{ color: 'red' }} size={22} />
+              <IoIosHeart style={{ color: "red" }} size={22} />
             )}
           </div>
         </div>
         <p className='car-class user-select-none'>{category}</p>
         <img
           className='car-img user-select-none'
-          src='./../../../public/images/cars/Koenigsegg.png'
-          alt='Koenigsegg'
+          src={`./../../../public/images/cars/${img}`}
+          alt={img}
         />
         <div className='car-detail'>
           <div className='car-detail-wrapper fuel-cap user-select-none'>

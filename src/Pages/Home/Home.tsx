@@ -1,15 +1,15 @@
-import './Home.css';
-import './Animations.css';
-import { MdKeyboardArrowRight, MdKeyboardArrowDown } from 'react-icons/md';
-import { HiArrowsUpDown } from 'react-icons/hi2';
-import CarCard from '../../Components/CarCard/CarCard';
-import data from './../../Assets/Data.json';
+import "./Home.css";
+import "./Animations.css";
+import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
+import { HiArrowsUpDown } from "react-icons/hi2";
+import CarCard from "../../Components/CarCard/CarCard";
+import data from "./../../Assets/Data.json";
 
 export default function Home() {
   return (
     <div className='app-container'>
       <div className='ads container'>
-        <a className='ad-card'>
+        <a className='ad-card user-select-none'>
           <div className='ad-content'>
             <div className='ad-description'>
               <h1>{data.ad.ad1Content.title}</h1>
@@ -17,17 +17,19 @@ export default function Home() {
             </div>
           </div>
           <div className='ad-image-container'>
-            <img
-              src='./../../../public/images/cars/Koenigsegg.png'
-              alt='Koenigsegg'
-            />
+            <div>
+              <img
+                src='./../../../public/images/cars/Koenigsegg.png'
+                alt='Koenigsegg'
+              />
+            </div>
             <span className='ad-btn'>
               Rental Car
               <MdKeyboardArrowRight size={24} />
             </span>
           </div>
         </a>
-        <a className='ad-card'>
+        <a className='ad-card user-select-none'>
           <div className='ad-content'>
             <div className='ad-description'>
               <h1>{data.ad.ad2Content.title}</h1>
@@ -35,10 +37,12 @@ export default function Home() {
             </div>
           </div>
           <div className='ad-image-container'>
-            <img
-              src='./../../../public/images/cars/NissanGTR.png'
-              alt='Koenigsegg'
-            />
+            <div>
+              <img
+                src='./../../../public/images/cars/NissanGTR.png'
+                alt='Koenigsegg'
+              />
+            </div>
             <span className='ad-btn'>
               Rental Car
               <MdKeyboardArrowRight size={24} />
@@ -68,7 +72,7 @@ export default function Home() {
                 <h3>Select your city</h3>
                 <MdKeyboardArrowDown size={18} />
               </div>
-            </a>{' '}
+            </a>{" "}
             <a className='filter-option-selector'>
               <h2>Time</h2>
               <div className='filter-option-wrapper'>
@@ -102,7 +106,7 @@ export default function Home() {
                 <h3>Select your date</h3>
                 <MdKeyboardArrowDown size={18} />
               </div>
-            </a>{' '}
+            </a>{" "}
             <a className='filter-option-selector'>
               <h2>Time</h2>
               <div className='filter-option-wrapper'>
@@ -129,6 +133,7 @@ export default function Home() {
                 category={car.category}
                 fuelCapacity={car.fuelCapacity}
                 gear={car.gear}
+                img={car.img}
                 personCapacity={car.personCapacity}
               />
             );

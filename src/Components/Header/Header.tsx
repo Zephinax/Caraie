@@ -1,61 +1,61 @@
-import './Header.css';
-import data from './../../Assets/Languages.json';
-import { VscSettings } from 'react-icons/vsc';
-import { VscSearch } from 'react-icons/vsc';
-import { IoHeart } from 'react-icons/io5';
-import { IoNotificationsSharp } from 'react-icons/io5';
-import { IoSettingsSharp } from 'react-icons/io5';
-
+import "./Header.css";
+import content from "./../../Assets/Languages.json";
+import { IoHeart } from "react-icons/io5";
+import { IoNotificationsSharp } from "react-icons/io5";
+import { IoSettingsSharp } from "react-icons/io5";
+import { VscSettings } from "react-icons/vsc";
+import { BiSearchAlt } from "react-icons/bi";
+import ToolTip from "../ToolTip/ToolTip";
 export default function Header() {
   return (
     <>
-      <div className='header'>
+      <div className='header container'>
         <div className='header-left'>
-          <img src='./../../../public/Images/logo.png' alt='logo' />
-          <div className='header-input'>
-            <div className='header-input-container'>
-              <button>
-                <VscSettings size={18} color='var(--tertiary-text)' />
-              </button>
-              <input type='text' placeholder={`${data.En['Header-search']}`} />
-            </div>
-            <button>
-              <VscSearch size={18} color='var(--tertiary-text)' />
+          <img
+            className='header-logo'
+            src='./../../../public/images/logo.png'
+            alt='Caraie logo'
+          />
+          <div className='header-search'>
+            <button className='header-search-btn tool-tip'>
+              <VscSettings />
+              <ToolTip style={{ top: 30, left: -30 }} text='Search Setting' />
+            </button>
+            <input
+              className='header-search-input'
+              type='text'
+              placeholder={content.En["header-search"]}
+            />
+            <button className='header-search-btn tool-tip'>
+              <BiSearchAlt />
+              <ToolTip
+                style={{
+                  top: 30,
+                  left: -8,
+                  transform: "scaleX(-1)",
+                }}
+                text='Search'
+              />
             </button>
           </div>
         </div>
         <div className='header-right'>
-          <button className='header-action temp'>
-            <IoHeart size={18} />
+          <button className='header-action tool-tip'>
+            <IoHeart />
+            <span className='tool-tip-text tool-tip-top'>Favorite Cars</span>
           </button>
-          <button className='header-action temp'>
-            <IoNotificationsSharp size={18} />
+          <button className='header-action tool-tip'>
+            <IoNotificationsSharp />
+            <span className='tool-tip-text tool-tip-top'>Alerts</span>
           </button>
-          <button className='header-action temp'>
-            <IoSettingsSharp size={18} />
+          <button className='header-action tool-tip'>
+            <IoSettingsSharp />
+            <span className='tool-tip-text tool-tip-top'>Setting</span>
           </button>
-          <button className='header-action'>
-            <img src='./../../../public/Images/profile.png' alt='' />
+          <button className='header-action tool-tip'>
+            <img src='./../../../public/images/profile.png' alt='' />
+            <span className='tool-tip-text tool-tip-top'>Account</span>
           </button>
-        </div>
-      </div>
-      <div className='mobile-header'>
-        <div className='mobile-header-top'>
-          <img width={108} src='./../../../public/Images/logo.png' alt='logo' />
-          <button className='header-action'>
-            <img src='./../../../public/Images/profile.png' alt='' />
-          </button>
-        </div>
-        <div className='mobile-header-input-container'>
-          <button className='mobiel-header-setting-button'>
-            <VscSettings size={24} color='var(--tertiary-text)' />
-          </button>
-          <div className='mobile-header-input-wrapper'>
-            <input type='text' placeholder={`${data.En['Header-search']}`} />
-            <button>
-              <VscSearch size={18} color='var(--tertiary-text)' />
-            </button>
-          </div>
         </div>
       </div>
     </>
