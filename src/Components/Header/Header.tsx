@@ -58,6 +58,28 @@ export default function Header() {
           </button>
         </div>
       </div>
+      <div className='mobile-header-search'>
+        <button className='header-search-btn tool-tip'>
+          <VscSettings />
+          <ToolTip style={{ top: 30, left: -30 }} text='Search Setting' />
+        </button>
+        <input
+          className='header-search-input'
+          type='text'
+          placeholder={content.En["header-search"]}
+        />
+        <button className='header-search-btn tool-tip'>
+          <BiSearchAlt />
+          <ToolTip
+            style={{
+              top: 30,
+              left: -8,
+              transform: "scaleX(-1)",
+            }}
+            text='Search'
+          />
+        </button>
+      </div>
     </>
   );
 }

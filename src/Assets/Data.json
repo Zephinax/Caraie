@@ -11,6 +11,16 @@
   },
   "Popular": [
     {
+      "id": "4",
+      "name": "Mercedes AMG GTR",
+      "category": "Sport",
+      "fuelCapacity": "75",
+      "gear": "Auto",
+      "personCapacity": "2",
+      "img": "AMG GTR.png",
+      "price": "99"
+    },
+    {
       "id": "1",
       "name": "Koenigsegg",
       "category": "Sport",
@@ -37,15 +47,6 @@
       "gear": "Manual",
       "personCapacity": "4",
       "img": "Rolls - Royce.png"
-    },
-    {
-      "id": "4",
-      "name": "CR - V",
-      "category": "Sport",
-      "fuelCapacity": "80",
-      "gear": "Manual",
-      "personCapacity": "6",
-      "img": "CR - V.png"
     }
   ]
 }

@@ -15,7 +15,6 @@
 }
 
 .ads {
-  padding-top: 105px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +29,7 @@
   }
 
   .ads {
-    padding-top: 0;
+    padding-top: 10px;
   }
 }
 
