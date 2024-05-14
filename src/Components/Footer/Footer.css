@@ -43,6 +43,7 @@
   margin: 0 40px;
   text-wrap: nowrap;
   color: var(--tertiary-text);
+  text-align: center;
 }
 
 .footer-top-right li span {
