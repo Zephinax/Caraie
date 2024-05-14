@@ -9,6 +9,8 @@
   background-color: var(--secondary-bg);
   border-bottom: 1px solid var(--border-color);
   z-index: 100;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-left {

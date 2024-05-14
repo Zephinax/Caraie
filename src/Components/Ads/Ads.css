@@ -42,8 +42,6 @@
 
 .ad-card img {
   margin-top: 24px;
-  /* width: 100%;
-  max-width: 300px; */
   width: clamp(50px, 100%, 300px);
 }
 
@@ -94,5 +92,10 @@
   }
   .ad-card:nth-child(2) {
     display: none;
+  }
+
+  .ad-card:nth-child(1) {
+    background: var(--primary-blue) url('./../../../public/images/adBg1.png')
+      no-repeat center/cover;
   }
 }

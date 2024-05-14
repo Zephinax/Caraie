@@ -25,7 +25,12 @@ export default function Recommendation() {
           );
         })}
       </div>
-      <a className='see-more'>See More...</a>
+      <div className='section-title-container container'>
+        <h2 className='section-title'>130 Cars</h2>
+        <a className='section-view-all' href=''>
+          See More...
+        </a>
+      </div>
     </div>
   );
 }
