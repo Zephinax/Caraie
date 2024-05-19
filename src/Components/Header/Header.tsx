@@ -1,11 +1,11 @@
-import "./Header.css";
-import content from "./../../Assets/Languages.json";
-import { IoHeart } from "react-icons/io5";
-import { IoNotificationsSharp } from "react-icons/io5";
-import { IoSettingsSharp } from "react-icons/io5";
-import { VscSettings } from "react-icons/vsc";
-import { BiSearchAlt } from "react-icons/bi";
-import ToolTip from "../ToolTip/ToolTip";
+import './Header.css';
+import content from './../../Assets/Languages.json';
+import { IoHeart } from 'react-icons/io5';
+import { IoNotificationsSharp } from 'react-icons/io5';
+import { IoSettingsSharp } from 'react-icons/io5';
+import { VscSettings } from 'react-icons/vsc';
+import { BiSearchAlt } from 'react-icons/bi';
+import ToolTip from '../ToolTip/ToolTip';
 export default function Header() {
   return (
     <>
@@ -19,23 +19,15 @@ export default function Header() {
           <div className='header-search'>
             <button className='header-search-btn tool-tip'>
               <VscSettings />
-              <ToolTip style={{ top: 30, left: -30 }} text='Search Setting' />
+              <ToolTip style={{ top: 32, left: -16 }} text='Category' />
             </button>
             <input
               className='header-search-input'
               type='text'
-              placeholder={content.En["header-search"]}
+              placeholder={content.En['header-search']}
             />
-            <button className='header-search-btn tool-tip'>
+            <button className='header-search-btn '>
               <BiSearchAlt />
-              <ToolTip
-                style={{
-                  top: 30,
-                  left: -8,
-                  transform: "scaleX(-1)",
-                }}
-                text='Search'
-              />
             </button>
           </div>
         </div>
@@ -66,7 +58,7 @@ export default function Header() {
         <input
           className='header-search-input'
           type='text'
-          placeholder={content.En["header-search"]}
+          placeholder={content.En['header-search']}
         />
         <button className='header-search-btn tool-tip'>
           <BiSearchAlt />
@@ -74,7 +66,7 @@ export default function Header() {
             style={{
               top: 30,
               left: -8,
-              transform: "scaleX(-1)",
+              transform: 'scaleX(-1)',
             }}
             text='Search'
           />

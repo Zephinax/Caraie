@@ -4,7 +4,6 @@
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.025) 0px 5px 10px;
   transition: all 0.15s linear;
-  cursor: pointer;
   font-size: 20px;
 }
 
@@ -31,6 +30,7 @@
 
 .likeBtn {
   padding-left: 16px;
+  cursor: pointer;
 }
 
 .car-class {
@@ -104,4 +104,9 @@
   color: var(--primary-bg);
   background: var(--primary-blue);
   cursor: pointer;
+  transition: all 0.25s linear;
+}
+
+.car-rent-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

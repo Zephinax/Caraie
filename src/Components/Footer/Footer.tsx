@@ -40,7 +40,7 @@ export default function Footer() {
       </div>
       <div className='footer-bottom'>
         <div className='footer-bottom-left'>
-          ©2022{' '}
+          ©2024{' '}
           <a style={{ color: '#d24670' }} href='https://www.zephinax.ir'>
             Zephinax.
           </a>{' '}

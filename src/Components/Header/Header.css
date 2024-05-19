@@ -97,6 +97,7 @@
   background: transparent;
   cursor: pointer;
   transition: all 0.15s linear;
+  color: var(--primary-text);
 }
 
 .header-action:has(img) {
