@@ -1,30 +1,49 @@
-# React + TypeScript + Vite
+<h2 align="center">
+  Caraie - v1.8<br/>
+</h2>
+<br/>
+<div align="center" style="display : flex; align-items: center; justify-content: center;">
+<img src="./demo/demo.webp" alt="Dark Demo Image" width="65%" height="100%" style="vertical-align:middle; display: inline-block;">
+</div>
+<br/>
+<div style="display : flex; align-items: center; justify-content: center;" align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
 
-Currently, two official plugins are available:
+<!-- [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp; -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<h3 align="center">
+    🔹
+    <a href="https://github.com/Zephinax/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
+    🔹
+    <a href="https://github.com/Zephinax/Portfolio/issues">Request Feature</a>
+</h3>
 
-- Configure the top-level `parserOptions` property like this:
+## What is Caraie?
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Caraie is car rental platform template made with react and type-script
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<!--
+## Features
+
+- 📱 Fully Responsive
+
+- 🖇️ Working Contact Form
+
+- 📖 Multi-Page Layout
+
+- 🔅 Dark & Light Mode
+
+- 💄 Fully Customizable -->
+
+Give a ⭐ if you like this project!
+
+## Authors
+
+- [@Zephinax](https://github.com/Zephinax)
+
+  Please give me proper credit by linking back to [Me](https://github.com/Zephinax), Thanks!
