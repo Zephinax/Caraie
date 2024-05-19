@@ -3,7 +3,7 @@
 </h2>
 <br/>
 <div align="center" style="display : flex; align-items: center; justify-content: center;">
-<img src="./demo/demo.webp" alt="Dark Demo Image" width="65%" height="100%" style="vertical-align:middle; display: inline-block;">
+<img src="./demo/demo.webp" alt="Demo Image" width="65%" height="100%" style="vertical-align:middle; display: inline-block;">
 </div>
 <br/>
 <div style="display : flex; align-items: center; justify-content: center;" align="center">
@@ -16,7 +16,7 @@
 
 </div>
 
-<h3 align="center">
+<h3 align="center" style="display:flex;">
     🔹
     <a href="https://github.com/Zephinax/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
     🔹
