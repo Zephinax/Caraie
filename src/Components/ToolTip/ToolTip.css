@@ -3,29 +3,32 @@
 }
 
 .tool-tip-text {
-  display: none;
+  /* display: none; */
   position: absolute;
   color: var(--primary-blue);
   padding: 4px;
+  padding-top: 3px;
   background: var(--primary-blue-hover);
   transition: all 0.15s linear;
   border: 1px solid var(--primary-blue);
   border-radius: 6px;
   font-size: 0.7rem;
   text-wrap: nowrap;
-  animation: opacity-increase 1s;
+  opacity: 0;
 }
 
 .tool-tip-top {
-  top: 50px;
+  top: 52px;
 }
 
 .tool-tip:hover .tool-tip-text {
-  display: block;
+  animation: opacity-increase 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 .tool-tip-top::after {
-  content: "";
+  content: '';
   background: transparent;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
