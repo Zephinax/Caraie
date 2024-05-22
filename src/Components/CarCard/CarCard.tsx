@@ -45,7 +45,7 @@ const CarCard = memo(
             {likeStatus ? (
               <IoHeartOutline size={22} />
             ) : (
-              <IoIosHeart style={{ color: 'red' }} size={22} />
+              <IoIosHeart style={{ color: 'var(--like-red)' }} size={22} />
             )}
           </div>
         </div>

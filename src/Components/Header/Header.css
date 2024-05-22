@@ -25,6 +25,10 @@
   width: clamp(50px, 100%, 148px);
 }
 
+.header-logo img {
+  width: 100%;
+}
+
 .header-search {
   display: flex;
   align-items: center;
@@ -115,9 +119,19 @@
 .header-action:hover {
   border-color: var(--secondary-text);
   background-color: var(--primary-blue-hover);
-  color: var(--primary-blue);
+  /* color: var(--primary-blue); */
 }
 
+.header-action:nth-child(1):hover {
+  color: var(--like-red);
+}
+
+.header-action:nth-child(2):hover {
+  color: var(--alert-yellow);
+}
+.header-action:nth-child(3):hover {
+  color: var(--primary-blue);
+}
 .mobile-header-search {
   display: none;
   align-items: center;

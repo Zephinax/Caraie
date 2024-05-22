@@ -5,22 +5,20 @@ import { IoNotificationsSharp } from 'react-icons/io5';
 import { IoSettingsSharp } from 'react-icons/io5';
 import { VscSettings } from 'react-icons/vsc';
 import { BiSearchAlt } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 import ToolTip from '../ToolTip/ToolTip';
 export default function Header() {
   return (
     <>
       <div className='header container'>
         <div className='header-left'>
-          <img
-            className='header-logo'
-            src='./../../../public/images/logo.png'
-            alt='Caraie logo'
-          />
+          <Link to='/' className='header-logo'>
+            <img src='./../../../public/images/logo.png' alt='Caraie logo' />
+          </Link>
           <div className='header-search'>
-            <button className='header-search-btn tool-tip'>
+            <Link to='/Category' className='header-search-btn'>
               <VscSettings />
-              <ToolTip style={{ top: 32, left: -16 }} text='Category' />
-            </button>
+            </Link>
             <input
               className='header-search-input'
               type='text'

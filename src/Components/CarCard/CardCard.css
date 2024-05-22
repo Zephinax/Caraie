@@ -104,9 +104,13 @@
   color: var(--primary-bg);
   background: var(--primary-blue);
   cursor: pointer;
-  transition: all 0.25s linear;
+  transition: all 0.15s linear;
+  border-radius: 4px;
+  margin: 1px;
 }
 
 .car-rent-btn:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: var(--primary-blue);
+  background: var(--secondary-bg);
+  outline: 1px solid var(--primary-blue);
 }

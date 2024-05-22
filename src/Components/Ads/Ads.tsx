@@ -1,11 +1,12 @@
 import './Ads.css';
 import data from './../../Assets/Data.json';
+import { Link } from 'react-router-dom';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
 export default function Ads() {
   return (
     <div className='ads container'>
-      <a className='ad-card user-select-none'>
+      <Link to='/Category' className='ad-card user-select-none'>
         <div className='ad-content'>
           <div className='ad-description'>
             <h1>{data.ad.ad1Content.title}</h1>
@@ -21,8 +22,8 @@ export default function Ads() {
             <MdKeyboardArrowRight size={24} />
           </span>
         </div>
-      </a>
-      <a className='ad-card user-select-none'>
+      </Link>
+      <Link to='/Category' className='ad-card user-select-none'>
         <div className='ad-content'>
           <div className='ad-description'>
             <h1>{data.ad.ad2Content.title}</h1>
@@ -38,7 +39,7 @@ export default function Ads() {
             <MdKeyboardArrowRight size={24} />
           </span>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }
