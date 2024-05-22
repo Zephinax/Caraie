@@ -1,6 +1,5 @@
 .footer-container {
   display: flex;
-  margin-top: 16px;
   flex-direction: column;
   background: var(--secondary-bg);
   border-top: 1px solid var(--border-color);
@@ -72,11 +71,16 @@
     gap: 24px;
   }
 
+  .footer-logo {
+    margin-bottom: 0;
+  }
+
   .footer-top-left {
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20%;
+    margin-bottom: 30px;
   }
 }
 
@@ -84,6 +88,11 @@
   .footer-top-left {
     text-align: center;
     flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .footer-logo {
+    margin-bottom: 16px;
   }
 
   .footer-top-right {

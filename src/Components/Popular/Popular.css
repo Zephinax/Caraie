@@ -31,3 +31,15 @@
     scroll-snap-stop: always;
   }
 }
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  flex-direction: column;
+  gap: 40px;
+}
+.loading a {
+  color: var(--secondary-text);
+}
