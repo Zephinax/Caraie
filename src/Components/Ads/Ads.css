@@ -7,16 +7,6 @@
   gap: 32px;
 }
 
-@media (max-width: 590px) {
-  .ad-card {
-    font-size: 14px;
-  }
-
-  .ads {
-    padding-top: 10px;
-  }
-}
-
 .ad-card:nth-child(1) {
   background: var(--secondary-blue) url('./../../../public/images/adBg1.png')
     no-repeat center/cover;
@@ -86,10 +76,23 @@
   margin-bottom: -4px;
 }
 
+@media (max-width: 590px) {
+  .ad-card {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .ads {
+    padding-top: 0px;
+  }
+}
+
 @media (max-width: 700px) {
   .ads {
     flex-direction: column;
   }
+
   .ad-card:nth-child(2) {
     display: none;
   }

@@ -1,67 +1,44 @@
 import './Ads.css';
-import data from './../../Assets/Data.json';
 import { Link } from 'react-router-dom';
 import { MdKeyboardArrowRight } from 'react-icons/md';
-import { useState, useEffect } from 'react';
+import { useFetch } from '../../Hooks/useFetch';
 
-export default function Ads({ setLoad }) {
-  const [loadingStatus, setLoadingStatus] = useState(true);
-  const [ads, setAds] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://localhost:8000/Popular');
-        const json = await response.json();
-        setAds(json);
-        setLoadingStatus(false);
-        setLoad('Ads');
-      } catch (error) {
-        console.error('Error fetching data [Ads] :', error);
-      }
-    };
-    fetchData();
-  }, []);
+export interface Ad {
+  title: string;
+  desc: string;
+  img: string;
+}
+
+export default function Ads() {
+  const { data } = useFetch<Ad[]>('http://localhost:8000/ads');
 
   return (
     <div className='ads container'>
-      {!loadingStatus && (
-        <>
-          <Link to='/Category' className='ad-card user-select-none'>
-            <div className='ad-content'>
-              <div className='ad-description'>
-                <h1>{data.ad.ad1Content.title}</h1>
-                <p>{data.ad.ad1Content.desc}</p>
+      {data &&
+        data.map((ad: Ad) => {
+          return (
+            <Link to='/Category' className='ad-card user-select-none'>
+              <div className='ad-content'>
+                <div className='ad-description'>
+                  <h1>{ad.title}</h1>
+                  <p>{ad.desc}</p>
+                </div>
               </div>
-            </div>
-            <div className='ad-image-container'>
-              <div>
-                <img src='./../../../public/images/Ad1.png' alt='Koenigsegg' />
+              <div className='ad-image-container'>
+                <div>
+                  <img
+                    src={`./../../../public/images/${ad.img}`}
+                    alt={ad.title}
+                  />
+                </div>
+                <span className='ad-btn'>
+                  Rental Car
+                  <MdKeyboardArrowRight size={24} />
+                </span>
               </div>
-              <span className='ad-btn'>
-                Rental Car
-                <MdKeyboardArrowRight size={24} />
-              </span>
-            </div>
-          </Link>
-          <Link to='/Category' className='ad-card user-select-none'>
-            <div className='ad-content'>
-              <div className='ad-description'>
-                <h1>{data.ad.ad2Content.title}</h1>
-                <p>{data.ad.ad2Content.desc}</p>
-              </div>
-            </div>
-            <div className='ad-image-container'>
-              <div>
-                <img src='./../../../public/images/Ad2.png' alt='Koenigsegg' />
-              </div>
-              <span className='ad-btn'>
-                Rental Car
-                <MdKeyboardArrowRight size={24} />
-              </span>
-            </div>
-          </Link>
-        </>
-      )}
+            </Link>
+          );
+        })}
     </div>
   );
 }
