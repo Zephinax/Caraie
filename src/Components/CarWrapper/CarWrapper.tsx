@@ -29,7 +29,7 @@ export default function CarWrapper({
   linkTitle,
   link = '/',
 }: CarWrapper) {
-  const { data } = useFetch(url);
+  const { data } = useFetch(url || '');
   return (
     <div className='car-wrapper'>
       <div className='section-title-container container'>
@@ -43,7 +43,7 @@ export default function CarWrapper({
 
       <div className={`car-wrapper-grid container`}>
         {url &&
-          data &&
+          Array.isArray(data) &&
           data.map((car: Car) => {
             return (
               <CarCard
