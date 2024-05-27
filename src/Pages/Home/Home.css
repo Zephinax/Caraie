@@ -5,6 +5,7 @@
 .app-container {
   position: relative;
   padding-bottom: 16px;
+  min-height: 82dvh;
 }
 
 @media (max-width: 750px) {
