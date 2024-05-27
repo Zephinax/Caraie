@@ -140,7 +140,7 @@
   font-size: 0.6em;
   border: 1px solid var(--border-color);
   padding: 0.4em 0.8em;
-  margin: 8px 64px;
+  margin: 18px 64px;
   margin-bottom: 0;
   border-radius: 1.8em;
   transition: all 0.15s linear;
@@ -150,17 +150,23 @@
   border-color: var(--secondary-text);
 }
 
+@media (max-width: 800px) {
+  .mobile-header-search {
+    margin-bottom: 16px;
+  }
+}
+
 @media (max-width: 750px) {
   .mobile-header-search {
     margin: 8px 48px;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
   }
 }
 
 @media (max-width: 660px) {
   .mobile-header-search {
     margin: 8px 20px;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
   }
 }
 
