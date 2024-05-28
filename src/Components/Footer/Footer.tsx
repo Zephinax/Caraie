@@ -1,14 +1,17 @@
 import './Footer.css';
+import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <div className='footer-container container'>
       <div className='footer-top'>
         <div className='footer-top-left'>
-          <img
-            className='footer-logo'
-            src='./../../../public/images/logo.png'
-            alt='logo'
-          />
+          <Link to='/'>
+            <img
+              className='footer-logo'
+              src='./../../../public/images/logo.png'
+              alt='logo'
+            />
+          </Link>
           <p>
             Our vision is to provide convenience and help increase your sales
             business.
