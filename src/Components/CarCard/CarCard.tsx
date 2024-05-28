@@ -50,11 +50,20 @@ const CarCard = memo(
           </div>
         </div>
         <p className='car-class user-select-none'>{category}</p>
-        <img
-          className='car-img user-select-none'
-          src={`./../../../public/images/cars/${img}`}
-          alt={img}
-        />
+
+        {img !== '' ? (
+          <img
+            className='car-img user-select-none'
+            src={`./../../../public/images/cars/${img}`}
+            alt={img}
+          />
+        ) : (
+          <img
+            className='car-img user-select-none'
+            src='./../../../public/images/cars/noImg.png'
+            alt='No Image Found'
+          />
+        )}
         <div className='car-detail'>
           <div className='car-detail-wrapper fuel-cap user-select-none'>
             <BsFuelPumpFill />
