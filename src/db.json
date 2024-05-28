@@ -23,18 +23,20 @@
       "personCapacity": "2",
       "img": "AMG GTR.png",
       "price": "120",
-      "discount": "119"
+      "discount": "119",
+      "description": "The Mercedes-AMG GT R is a high-performance sports car that combines exceptional speed with impressive handling and agility."
     },
     {
       "id": "1",
       "name": "Koenigsegg",
-      "category": "Sport",
+      "category": "Hypercar",
       "fuelCapacity": "90",
       "gear": "Manual",
       "personCapacity": "2",
       "img": "Koenigsegg.png",
       "price": "110",
-      "discount": ""
+      "discount": "",
+      "description": "The Koenigsegg is a Swedish hypercar that boasts an incredible 1,340 horsepower and a top speed of over 250 mph."
     },
     {
       "id": "2",
@@ -45,18 +47,20 @@
       "personCapacity": "2",
       "img": "NissanGTR.png",
       "price": "100",
-      "discount": "98"
+      "discount": "98",
+      "description": "The Nissan GT-R is a high-performance sports car that combines impressive acceleration with advanced technology and handling."
     },
     {
       "id": "3",
       "name": "Mercedes CLS 63",
-      "category": "Sport",
+      "category": "Luxury",
       "fuelCapacity": "70",
       "gear": "Manual",
       "personCapacity": "4",
       "img": "Cls63.png",
       "price": "115",
-      "discount": ""
+      "discount": "",
+      "description": "The Mercedes-Benz CLS 63 is a high-performance luxury sedan that offers exceptional power and comfort."
     },
     {
       "id": "1",
@@ -67,18 +71,20 @@
       "personCapacity": "4",
       "img": "BMW M3.png",
       "price": "80",
-      "discount": ""
+      "discount": "",
+      "description": "The BMW M3 is a high-performance sports sedan that offers exceptional handling and acceleration."
     },
     {
       "id": "2",
       "name": "Rolls Royce Ghost",
-      "category": "Sport",
+      "category": "Luxury",
       "fuelCapacity": "70",
       "gear": "Manual",
       "personCapacity": "4",
       "img": "Rolls - Royce.png",
       "price": "115",
-      "discount": ""
+      "discount": "",
+      "description": "The Rolls-Royce Ghost is a luxurious sedan that offers exceptional comfort and refinement."
     },
     {
       "id": "3",
@@ -89,7 +95,8 @@
       "personCapacity": "6",
       "img": "Trios.png",
       "price": "60",
-      "discount": ""
+      "discount": "",
+      "description": "The Trios is a spacious and practical SUV that offers exceptional value for its price."
     },
     {
       "id": "4",
@@ -100,7 +107,8 @@
       "personCapacity": "4",
       "img": "CR-VB.png",
       "price": "81",
-      "discount": "80"
+      "discount": "80",
+      "description": "The CR-VB is a compact SUV that offers exceptional fuel efficiency and practicality."
     },
     {
       "id": "5",
@@ -111,7 +119,8 @@
       "personCapacity": "4",
       "img": "MG-ZX.png",
       "price": "85",
-      "discount": ""
+      "discount": "",
+      "description": "The MG ZX Exclusive is a stylish and feature-packed hatchback that offers exceptional value for its price."
     },
     {
       "id": "6",
@@ -122,29 +131,68 @@
       "personCapacity": "4",
       "img": "CR-V.png",
       "price": "80",
-      "discount": ""
+      "discount": "",
+      "description": "The CR-V is a compact SUV that offers exceptional fuel efficiency and practicality."
     },
     {
-      "id": "7",
-      "name": "Rush",
-      "category": "SUV",
+      "id": "9",
+      "name": "Audi R8",
+      "category": "Sport",
       "fuelCapacity": "80",
-      "gear": "Manual",
-      "personCapacity": "6",
-      "img": "Rush.png",
-      "price": "76",
-      "discount": ""
+      "gear": "Auto",
+      "personCapacity": "2",
+      "img": "Audi R8.png",
+      "price": "150",
+      "discount": "",
+      "description": "The Audi R8 is a high-performance sports car that offers exceptional acceleration and handling."
     },
     {
-      "id": "8",
-      "name": "Trios",
-      "category": "SUV",
-      "fuelCapacity": "90",
+      "id": "10",
+      "name": "Porsche 911",
+      "category": "Sport",
+      "fuelCapacity": "70",
       "gear": "Manual",
-      "personCapacity": "6",
-      "img": "Trios.png",
+      "personCapacity": "2",
+      "img": "911.png",
+      "price": "140",
+      "discount": "",
+      "description": "The Porsche 911 is a high-performance sports car that offers exceptional handling and acceleration."
+    },
+    {
+      "id": "11",
+      "name": "Lamborghini Aventador",
+      "category": "Hypercar",
+      "fuelCapacity": "90",
+      "gear": "Auto",
+      "personCapacity": "2",
+      "img": "Aventador.png",
+      "price": "400",
+      "discount": "",
+      "description": "The Lamborghini Aventador is a high-performance hypercar that offers exceptional speed and acceleration."
+    },
+    {
+      "id": "12",
+      "name": "Tesla Model S",
+      "category": "Luxury",
+      "fuelCapacity": "100",
+      "gear": "Auto",
+      "personCapacity": "5",
+      "img": "Tesla S.png",
+      "price": "100",
+      "discount": "",
+      "description": "The Tesla Model S is a high-performance luxury sedan that offers exceptional acceleration and range."
+    },
+    {
+      "id": "13",
+      "name": "Ford Mustang",
+      "category": "Sport",
+      "fuelCapacity": "60",
+      "gear": "Manual",
+      "personCapacity": "4",
+      "img": "FordMustang.png",
       "price": "60",
-      "discount": ""
+      "discount": "",
+      "description": "The Ford Mustang is a high-performance sports car that offers exceptional acceleration and handling."
     }
   ]
 }
