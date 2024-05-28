@@ -23,7 +23,7 @@ const CarCard = memo(
     fuelCapacity = 'UnKnown',
     gear = 'UnKnown',
     personCapacity = 'UnKnown',
-    img = 'noImg.png',
+    img,
     price = 'Call',
     discount,
   }: cardProps) => {
@@ -60,7 +60,7 @@ const CarCard = memo(
         ) : (
           <img
             className='car-img user-select-none'
-            src='./../../../public/images/cars/noImg.png'
+            src='./../../../public/images/noImg.webp'
             alt='No Image Found'
           />
         )}
