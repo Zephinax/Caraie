@@ -2,7 +2,15 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
-  justify-content: center;
-  justify-items: stretch;
-  align-items: stretch;
+}
+
+@media (max-width: 630px) {
+  .car-wrapper-slide {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    scroll-snap-type: x mandatory;
+  }
 }

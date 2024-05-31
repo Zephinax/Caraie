@@ -4,6 +4,7 @@ import CarCard from '../CarCard/CarCard';
 import './CarWrapper.css';
 
 interface CarWrapper {
+  slide?: boolean | undefined;
   title: string;
   url?: string | undefined;
   linkTitle?: string;
@@ -24,6 +25,7 @@ interface Car {
 }
 
 export default function CarWrapper({
+  slide,
   title,
   url,
   linkTitle,
@@ -41,7 +43,10 @@ export default function CarWrapper({
         )}
       </div>
 
-      <div className={`car-wrapper-grid container`}>
+      <div
+        className={`car-wrapper-grid container ${
+          slide && 'car-wrapper-slide'
+        }`}>
         {url &&
           Array.isArray(data) &&
           data.map((car: Car) => {

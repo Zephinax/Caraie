@@ -10,6 +10,7 @@ export default function Home() {
       <Ads />
       <Filter />
       <CarWrapper
+        slide={true}
         title='Sport Cars'
         linkTitle='View All'
         link='/Category'
@@ -19,7 +20,7 @@ export default function Home() {
         title='All Cars'
         linkTitle='View All'
         link='/Category'
-        url='http://localhost:8000/Cars'
+        url='http://localhost:8000/Cars?_sort=category'
       />
     </div>
   );

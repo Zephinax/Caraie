@@ -7,6 +7,7 @@ export interface Ad {
   title: string;
   desc: string;
   img: string;
+  id: string;
 }
 
 export default function Ads() {
@@ -17,7 +18,10 @@ export default function Ads() {
       {data &&
         data.map((ad: Ad) => {
           return (
-            <Link to='/Category' className='ad-card user-select-none'>
+            <Link
+              key={ad.id}
+              to='/Category'
+              className='ad-card user-select-none'>
               <div className='ad-content'>
                 <div className='ad-description'>
                   <h1>{ad.title}</h1>
