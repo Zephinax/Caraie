@@ -1,0 +1,8 @@
+.detail-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-wrapper > div {
+  flex: 1;
+}
