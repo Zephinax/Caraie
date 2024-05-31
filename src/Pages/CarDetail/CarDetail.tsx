@@ -16,6 +16,10 @@ export default function CarDetail() {
   };
   useEffect(() => {
     getDetail();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [params]);
+  useEffect(() => {
+    getDetail();
   }, [loading]);
   useEffect(() => {
     window.scrollTo(0, 0);
