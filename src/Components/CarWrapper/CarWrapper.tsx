@@ -52,6 +52,7 @@ export default function CarWrapper({
           data.map((car: Car) => {
             return (
               <CarCard
+                id={car.id}
                 key={car.id}
                 name={car.name}
                 category={car.category}
