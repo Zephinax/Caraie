@@ -1,0 +1,57 @@
+.detail-card {
+  background: var(--secondary-bg);
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.detail-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.detail-top-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+}
+
+.👍🏻 {
+  display: flex;
+  min-width: fit-content;
+  justify-content: space-between;
+  flex: 1;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+  color: var(--secondary-text);
+  width: 100%;
+}
+
+.info-title {
+  color: var(--tertiary-text);
+}
+
+.detail-desc {
+  margin-top: 8px;
+  color: var(--tertiary-text);
+}
+
+.detail-info {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  justify-items: center;
+  row-gap: 16px;
+  column-gap: 26px;
+  margin-bottom: 20px;
+}
+
+.detail-card .car-price {
+  font-size: 24px;
+}
+
+.detail-card a {
+  font-size: 16px;
+}
