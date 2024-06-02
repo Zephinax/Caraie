@@ -1,44 +1,59 @@
-<h2 align="center">
-  Caraie - v1.8<br/>
-</h2>
-<br/>
-<div align="center" style="display : flex; align-items: center; justify-content: center;">
-<img src="./demo/demo.webp" alt="Demo Image" width="65%" height="100%" style="vertical-align:middle; display: inline-block;">
-</div>
-<br/>
-<div style="display : flex; align-items: center; justify-content: center;" align="center">
+# Caraie - Car Rental Website Template
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
+![image](./CaraiePreview.webp)
 
-<!-- [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp; -->
+### ⚠️ **All names, information and assets used are fake and do not represent a real componany.** ⚠️
 
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
+## Live Demo
 
-</div>
+### Take a look the live demo here 👉 [Zephinax.Caraie.ir](https://zephinax.github.io/HooBank/)
 
-<h3 align="center" style="display:flex;">
-    🔹
-    <a href="https://github.com/Zephinax/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/Zephinax/Portfolio/issues">Request Feature</a>
-</h3>
+Embark on a dynamic car rental journey with our innovative platform powered by React & TypeScript, where every click opens the door to endless possibilities!
 
-## What is Caraie?
+## Layout
 
-Caraie is car rental platform template made with react and type-script
+- Navbar
+- Home Page
+- Category
+- Car detail
+- Footer
 
-<!--
 ## Features
 
-- 📱 Fully Responsive
+- Fully Responsive Design
+- User Friendly Navigation
 
-- 🖇️ Working Contact Form
+## Built With
 
-- 📖 Multi-Page Layout
+- React.js
+- Typescript
+- Vite
 
-- 🔅 Dark & Light Mode
+## How to install
 
-- 💄 Fully Customizable -->
+1. Clone this repository:
+
+```bash
+git clone https://github.com/Zephinax/Caraie.git
+```
+
+2. Go into project
+
+```bash
+cd Caraie
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Run project
+
+```bash
+npm run dev
+```
 
 Give a ⭐ if you like this project!
 
