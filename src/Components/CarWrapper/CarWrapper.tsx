@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
-import { useFetch } from '../../Hooks/useFetch';
 import CarCard from '../CarCard/CarCard';
 import './CarWrapper.css';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { useFetchJson } from '../../Hooks/useFetchJson';
 
 interface CarWrapper {
   slide?: boolean | undefined;
@@ -9,7 +11,9 @@ interface CarWrapper {
   url?: string | undefined;
   linkTitle?: string;
   link?: string;
+  remove?: string;
   setLoad?: void;
+  filter?: string;
 }
 
 interface Car {
@@ -28,10 +32,29 @@ export default function CarWrapper({
   slide,
   title,
   url,
+  filter,
+  remove,
   linkTitle,
   link = '/',
 }: CarWrapper) {
-  const { data } = useFetch(url || '');
+  const [cars, setCars] = useState<Car[] | null>(null);
+  const { data, loading } = useFetchJson<Car[]>(`/Caraie/db/${url}`);
+  useEffect(() => {
+    if (filter && data) {
+      const filteredCars = data.filter((car: Car) => car.category === filter);
+      if (remove) {
+        const removedTarget = filteredCars.filter(
+          (car: Car) => car.name !== remove
+        );
+        setCars(removedTarget);
+      } else {
+        setCars(filteredCars);
+      }
+    } else {
+      setCars(data);
+    }
+  }, [data, filter, remove]);
+
   return (
     <div className='car-wrapper'>
       <div className='section-title-container container'>
@@ -42,14 +65,14 @@ export default function CarWrapper({
           </Link>
         )}
       </div>
-
       <div
         className={`car-wrapper-grid container ${
           slide && 'car-wrapper-slide'
         }`}>
         {url &&
-          Array.isArray(data) &&
-          data.map((car: Car) => {
+          !loading &&
+          Array.isArray(cars) &&
+          cars.map((car: Car) => {
             return (
               <CarCard
                 id={car.id}

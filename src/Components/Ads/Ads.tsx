@@ -1,7 +1,7 @@
 import './Ads.css';
 import { Link } from 'react-router-dom';
 import { MdKeyboardArrowRight } from 'react-icons/md';
-import { useFetch } from '../../Hooks/useFetch';
+import { useFetchJson } from '../../Hooks/useFetchJson';
 
 export interface Ad {
   title: string;
@@ -11,7 +11,7 @@ export interface Ad {
 }
 
 export default function Ads() {
-  const { data } = useFetch<Ad[]>('http://localhost:8000/ads');
+  const { data } = useFetchJson<Ad[]>('/Caraie/db/ads.json');
 
   return (
     <div className='ads container'>
@@ -30,10 +30,7 @@ export default function Ads() {
               </div>
               <div className='ad-image-container'>
                 <div>
-                  <img
-                    src={`./../../../public/images/${ad.img}`}
-                    alt={ad.title}
-                  />
+                  <img src={`/Caraie/public/images/${ad.img}`} alt={ad.title} />
                 </div>
                 <span className='ad-btn'>
                   Rental Car
