@@ -2,7 +2,21 @@ import './Content.css';
 import Rating from '../Rating/Rating';
 import Like from '../Like/Like';
 import { Link } from 'react-router-dom';
-export default function Content(data: object) {
+interface Data {
+  data: {
+    name: string;
+    description: string;
+    category: string;
+    personCapacity: string;
+    gear: string;
+    fuelCapacity: string;
+    discount: string;
+    price: string;
+    rating: string;
+    id: string;
+  };
+}
+export default function Content(data: Data) {
   return (
     <div className='detail-card'>
       <div className='detail-top'>
