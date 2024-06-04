@@ -1,6 +1,8 @@
 .detail-wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+  align-items: stretch;
 }
 
 .detail-wrapper > div {
