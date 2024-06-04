@@ -1,6 +1,6 @@
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useFetchJson } from '../../Hooks/useFetchJson';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import './CarDetail.css';
 import Gallery from '../../Components/Gallery/Gallery';
 import Content from '../../Components/Content/Content';
@@ -22,27 +22,25 @@ interface Car {
 }
 
 export default function CarDetail() {
-  const params = useParams<{ CarId?: string }>();
+  const location = useLocation();
   const [targetCar, setTargetCar] = useState<Car | null>(null);
   const { data, error, loading } = useFetchJson<Car[]>('/Caraie/db/Cars.json');
+  const pathParts = location.pathname.split('/');
+  const carId = pathParts[pathParts.length - 1];
 
-  const getDetail = useCallback(() => {
-    if (data && params.CarId) {
-      const car = data.find((car) => car.id === params.CarId);
-      if (car) {
-        setTargetCar(car);
+  useEffect(() => {
+    const getDetail = () => {
+      if (data && carId) {
+        const car = data.find((car) => car.id === carId);
+        if (car) {
+          setTargetCar(car);
+        }
       }
-    }
-  }, [data, params.CarId]);
-  useEffect(() => {
-    getDetail();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [params.CarId]);
+    };
 
-  useEffect(() => {
     getDetail();
     window.scrollTo({ top: 0 });
-  }, []);
+  }, [data, carId]);
 
   if (loading) return <LoadingSpiner />;
   if (error) return <div>Error: {error.toString()}</div>;
