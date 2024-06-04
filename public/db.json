@@ -24,7 +24,8 @@
       "img": "AMG GTR.png",
       "price": "120",
       "discount": "119",
-      "description": "The Mercedes-AMG GT R is a high-performance sports car that combines exceptional speed with impressive handling and agility."
+      "description": "The Mercedes-AMG GT R is a high-performance sports car that combines exceptional speed with impressive handling and agility.",
+      "rating": "4"
     },
     {
       "id": "2",
@@ -36,7 +37,8 @@
       "img": "Koenigsegg.png",
       "price": "110",
       "discount": "",
-      "description": "The Koenigsegg is a Swedish hypercar that boasts an incredible 1,340 horsepower and a top speed of over 250 mph."
+      "description": "The Koenigsegg is a Swedish hypercar that boasts an incredible 1,340 horsepower and a top speed of over 250 mph.",
+      "rating": "4"
     },
     {
       "id": "3",
