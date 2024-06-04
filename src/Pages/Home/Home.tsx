@@ -17,13 +17,14 @@ export default function Home() {
         title='Sport Cars'
         linkTitle='View All'
         link='/Category'
-        url='http://localhost:8000/Cars?category=Sport'
+        url='Cars.json'
+        filter='Sport'
       />
       <CarWrapper
         title='All Cars'
         linkTitle='View All'
         link='/Category'
-        url='http://localhost:8000/Cars?_sort=category'
+        url='Cars.json'
       />
     </div>
   );

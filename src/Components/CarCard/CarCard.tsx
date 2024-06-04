@@ -41,13 +41,13 @@ const CarCard = memo(
         {img !== '' ? (
           <img
             className='car-img user-select-none'
-            src={`./../../../public/images/cars/${img}`}
+            src={`/Caraie/public/images/cars/${img}`}
             alt={img}
           />
         ) : (
           <img
             className='car-img user-select-none'
-            src='./../../../public/images/noImg.webp'
+            src='/Caraie/public/images/noImg.webp'
             alt='No Image Found'
           />
         )}
@@ -71,7 +71,7 @@ const CarCard = memo(
             <span id='price'>{price}</span>
           </div>
           <Link to={`/detail/${id}`} className='car-rent-btn user-select-none'>
-            Rent Now
+            See Details
           </Link>
         </div>
       </div>
