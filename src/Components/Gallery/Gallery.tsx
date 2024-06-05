@@ -28,7 +28,10 @@ export default function Gallery(props: GalleryProps) {
       </div>
       <div className='car-assets'>
         {carAssets.map((image) => {
-          const src = `/Caraie/public/images/cars-assets/Carinside${image}.jpg`;
+          const src = new URL(
+            `/public/images/carsInside/Carinside${image}.jpg`,
+            import.meta.url
+          ).href;
           return (
             <div className='image-container' key={image}>
               <img src={src} alt='' />
