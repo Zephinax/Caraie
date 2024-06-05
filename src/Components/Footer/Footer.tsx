@@ -8,7 +8,7 @@ export default function Footer() {
           <Link to='/'>
             <img
               className='footer-logo'
-              src='/Caraie/public/images/logo.png'
+              src='/public/images/logo.png'
               alt='logo'
             />
           </Link>

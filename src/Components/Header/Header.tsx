@@ -13,7 +13,7 @@ export default function Header() {
       <div className='header container'>
         <div className='header-left'>
           <Link to='/' className='header-logo'>
-            <img src='/Caraie/public/images/logo.png' alt='Caraie logo' />
+            <img src='/public/images/logo.png' alt='Caraie logo' />
           </Link>
           <div className='header-search'>
             <Link to='/Category' className='header-search-btn'>
@@ -43,7 +43,7 @@ export default function Header() {
             <span className='tool-tip-text tool-tip-top'>Setting</span>
           </button>
           <button className='header-action tool-tip'>
-            <img src='/Caraie/public/images/profile.png' alt='' />
+            <img src='/public/images/profile.png' alt='' />
             <span className='tool-tip-text tool-tip-top'>Account</span>
           </button>
         </div>

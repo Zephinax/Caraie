@@ -17,7 +17,7 @@ export default function Gallery(props: GalleryProps) {
           style={{ borderRadius: '10px' }}
           src={
             mainImage === 'default'
-              ? `/Caraie/public/images/cars/${props.data.img}`
+              ? `/public/images/cars/${props.data.img}`
               : ``
           }
           alt=''
@@ -25,7 +25,7 @@ export default function Gallery(props: GalleryProps) {
       </div>
       <div className='car-assets'>
         {carAssets.map((image) => {
-          const src = `/Caraie/public/images/cars-assets/Carinside${image}.jpg`;
+          const src = `/public/images/cars-assets/Carinside${image}.jpg`;
           return (
             <div key={image}>
               <img src={src} alt='' />

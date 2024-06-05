@@ -38,7 +38,7 @@ export default function CarWrapper({
   link = '/',
 }: CarWrapper) {
   const [cars, setCars] = useState<Car[] | null>(null);
-  const { data, loading } = useFetchJson<Car[]>(`/Caraie/db/${url}`);
+  const { data, loading } = useFetchJson<Car[]>(`/db/${url}`);
   useEffect(() => {
     if (filter && data) {
       const filteredCars = data.filter((car: Car) => car.category === filter);

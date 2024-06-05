@@ -41,13 +41,13 @@ const CarCard = memo(
         {img !== '' ? (
           <img
             className='car-img user-select-none'
-            src={`/Caraie/public/images/cars/${img}`}
+            src={`/public/images/cars/${img}`}
             alt={img}
           />
         ) : (
           <img
             className='car-img user-select-none'
-            src='/Caraie/public/images/noImg.webp'
+            src='/public/images/noImg.webp'
             alt='No Image Found'
           />
         )}

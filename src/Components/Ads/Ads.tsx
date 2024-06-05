@@ -11,7 +11,7 @@ export interface Ad {
 }
 
 export default function Ads() {
-  const { data } = useFetchJson<Ad[]>('/Caraie/db/ads.json');
+  const { data } = useFetchJson<Ad[]>('/db/ads.json');
 
   return (
     <div className='ads container'>
@@ -30,7 +30,7 @@ export default function Ads() {
               </div>
               <div className='ad-image-container'>
                 <div>
-                  <img src={`/Caraie/public/images/${ad.img}`} alt={ad.title} />
+                  <img src={`/public/images/${ad.img}`} alt={ad.title} />
                 </div>
                 <span className='ad-btn'>
                   Rental Car

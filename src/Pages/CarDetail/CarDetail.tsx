@@ -24,7 +24,7 @@ interface Car {
 export default function CarDetail() {
   const location = useLocation();
   const [targetCar, setTargetCar] = useState<Car | null>(null);
-  const { data, error, loading } = useFetchJson<Car[]>('/Caraie/db/Cars.json');
+  const { data, error, loading } = useFetchJson<Car[]>('/db/Cars.json');
   const pathParts = location.pathname.split('/');
   const carId = pathParts[pathParts.length - 1];
 
