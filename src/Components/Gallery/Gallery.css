@@ -1,24 +1,49 @@
 .gallery-wrapper {
-  background: lightseagreen;
+  gap: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  min-width: 240px;
+  background: var(--primary-blue);
+  background-image: './../../../public/images/Ad1.png';
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.025) 0px 5px 10px;
+  transition: all 0.15s linear;
+}
+
+.gallery-wrapper:hover {
+  box-shadow: rgba(0, 0, 0, 0.095) 0px 5px 10px;
+}
+@media (min-width: 600px) {
+  .gallery-wrapper {
+    min-width: 300px;
+  }
+}
+
+.image-container {
+  width: 100%;
+  max-width: 195px;
+  aspect-ratio: 2/1;
+}
+
+.image-container img {
+  width: 100%;
 }
 
 .gallery-wrapper img {
-  max-width: 100%;
-  width: fit-content;
-  background: red;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .main-img {
-  background: var(--primary-blue);
-  padding: 24px;
   border-radius: 10px;
 }
 
 .car-assets {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* background: lightgreen; */
+  height: 100%;
+  display: flex;
+  gap: 16px;
 }

@@ -32,35 +32,39 @@ export default function Content(data: Data) {
         <p>{data.data.description}</p>
         <div className='detail-info'>
           <div className='👍🏻'>
-            <span className='info-title'>Category</span>
-            <span>{data.data.category}</span>
+            <div className='🙏🏻'>
+              <span className='info-title'>Category</span>
+              <span>{data.data.category}</span>
+            </div>
+            <div className='🙏🏻'>
+              <span className='info-title'>Capacity</span>
+              <span>{data.data.personCapacity} Person</span>
+            </div>
           </div>
           <div className='👍🏻'>
-            <span className='info-title'>Capacity</span>
-            <span>{data.data.personCapacity} Person</span>
-          </div>
-          <div className='👍🏻'>
-            <span className='info-title'>Gearbox</span>
-            <span>{data.data.gear}</span>
-          </div>
-          <div className='👍🏻'>
-            <span className='info-title'>FuelCap</span>
-            <span>{data.data.fuelCapacity}L</span>
+            <div className='🙏🏻'>
+              <span className='info-title'>Gearbox</span>
+              <span>{data.data.gear}</span>
+            </div>
+            <div className='🙏🏻'>
+              <span className='info-title'>FuelCap</span>
+              <span>{data.data.fuelCapacity}L</span>
+            </div>
           </div>
         </div>
-        <div className='car-price-and-rent'>
-          <div className='car-price user-select-none'>
-            {data.data.discount !== '' && (
-              <span id='discount'>{data.data.discount}</span>
-            )}
-            <span id='price'>{data.data.price}</span>
-          </div>
-          <Link
-            to={`/detail/${data.data.id}`}
-            className='car-rent-btn user-select-none'>
-            Rent Now
-          </Link>
+      </div>
+      <div className='car-price-and-rent'>
+        <div className='car-price user-select-none'>
+          {data.data.discount !== '' && (
+            <span id='discount'>{data.data.discount}</span>
+          )}
+          <span id='price'>{data.data.price}</span>
         </div>
+        <Link
+          to={`/detail/${data.data.id}`}
+          className='car-rent-btn user-select-none'>
+          Rent Now
+        </Link>
       </div>
     </div>
   );

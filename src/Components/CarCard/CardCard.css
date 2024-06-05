@@ -3,8 +3,8 @@
   padding: 24px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.025) 0px 5px 10px;
-  transition: all 0.15s linear;
   font-size: 20px;
+  transition: all 0.15s linear;
 }
 
 @media (max-width: 590px) {
@@ -107,6 +107,7 @@
   transition: all 0.15s linear;
   border-radius: 4px;
   margin: 1px;
+  text-wrap: nowrap;
 }
 
 .car-rent-btn:hover {

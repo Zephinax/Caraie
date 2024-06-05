@@ -8,9 +8,9 @@ export const useFetchJson = <T>(
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (url: string) => {
       try {
-        const response = await fetch(jsonPath);
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -22,8 +22,10 @@ export const useFetchJson = <T>(
         setLoading(false);
       }
     };
-
-    fetchData();
+    if (jsonPath) {
+      const prefix = new URL(`/public/db/${jsonPath}`, import.meta.url).href;
+      fetchData(prefix);
+    }
   }, [jsonPath]);
 
   return { data, loading, error };

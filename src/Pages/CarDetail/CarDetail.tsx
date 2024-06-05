@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
-import { useFetchJson } from '../../Hooks/useFetchJson';
+// import { useFetchJson } from '../../Hooks/useFetchJson';
+import { useCarsDb } from '../../Hooks/useCarsDb';
 import { useEffect, useState } from 'react';
 import './CarDetail.css';
 import Gallery from '../../Components/Gallery/Gallery';
@@ -24,7 +25,8 @@ interface Car {
 export default function CarDetail() {
   const location = useLocation();
   const [targetCar, setTargetCar] = useState<Car | null>(null);
-  const { data, error, loading } = useFetchJson<Car[]>('/db/Cars.json');
+  // const { data, error, loading } = useFetchJson<Car[]>('/db/Cars.json');
+  const { data, error, loading } = useCarsDb<Car[]>();
   const pathParts = location.pathname.split('/');
   const carId = pathParts[pathParts.length - 1];
 

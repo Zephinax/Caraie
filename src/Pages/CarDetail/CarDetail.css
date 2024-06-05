@@ -3,6 +3,7 @@
   justify-content: space-between;
   gap: 30px;
   align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .detail-wrapper > div {
