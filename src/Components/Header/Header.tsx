@@ -13,7 +13,10 @@ export default function Header() {
       <div className='header container'>
         <div className='header-left'>
           <Link to='/' className='header-logo'>
-            <img src='/Caraie/public/images/logo.png' alt='Caraie logo' />
+            <img
+              src='./../../../Caraie/public/images/logo.png'
+              alt='Caraie logo'
+            />
           </Link>
           <div className='header-search'>
             <Link to='/Category' className='header-search-btn'>
