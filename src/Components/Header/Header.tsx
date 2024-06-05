@@ -7,13 +7,14 @@ import { VscSettings } from 'react-icons/vsc';
 import { BiSearchAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import ToolTip from '../ToolTip/ToolTip';
+import logoImage from './../../../public/images/logo.png';
 export default function Header() {
   return (
     <>
       <div className='header container'>
         <div className='header-left'>
           <Link to='/' className='header-logo'>
-            <img src='/Caraie/public/images/logo.png' alt='Caraie logo' />
+            <img src={logoImage} alt='Caraie logo' />
           </Link>
           <div className='header-search'>
             <Link to='/Category' className='header-search-btn'>
