@@ -17,8 +17,11 @@ export default function Gallery(props: GalleryProps) {
           style={{ borderRadius: '10px' }}
           src={
             mainImage === 'default'
-              ? `/Caraie/public/images/cars/${props.data.img}`
-              : ``
+              ? new URL(
+                  `/public/images/cars/${props.data.img}`,
+                  import.meta.url
+                ).href
+              : new URL(`/public/images/noImg.webp`, import.meta.url).href
           }
           alt=''
         />

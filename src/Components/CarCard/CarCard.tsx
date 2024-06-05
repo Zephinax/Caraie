@@ -37,17 +37,16 @@ const CarCard = memo(
           <Like />
         </div>
         <p className='car-class user-select-none'>{category}</p>
-
         {img !== '' ? (
           <img
             className='car-img user-select-none'
-            src={`/Caraie/public/images/cars/${img}`}
+            src={new URL(`/public/images/cars/${img}`, import.meta.url).href}
             alt={img}
           />
         ) : (
           <img
             className='car-img user-select-none'
-            src='/public/images/noImg.webp'
+            src={new URL('/public/images/noImg.webp', import.meta.url).href}
             alt='No Image Found'
           />
         )}
