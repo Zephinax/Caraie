@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-### Take a look the live demo here 👉 [Zephinax.Caraie.ir](https://zephinax.github.io/HooBank/)
+### Take a look the live demo here 👉 [Zephinax.Caraie.ir](https://zephinax.github.io/Caraie/)
 
 Embark on a dynamic car rental journey with our innovative platform powered by React & TypeScript, where every click opens the door to endless possibilities!
 
