@@ -15,6 +15,7 @@ interface Data {
     price: string;
     rating: string;
     id: string;
+    isLiked: string;
   };
 }
 export default function Content(data: Data) {
@@ -25,10 +26,10 @@ export default function Content(data: Data) {
           <h2 className='detail-name'>
             <DecoderText text={data.data.name} />
           </h2>
-          <Rating />
+          <Rating rating={Number(data.data.rating)} />
         </div>
         <div className='detail-top-right'>
-          <Like />
+          <Like isLiked={data.data.isLiked} />
         </div>
       </div>
       <div className='detail-desc'>
