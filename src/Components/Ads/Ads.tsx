@@ -29,7 +29,6 @@ export default function Ads() {
     <div className='ads container'>
       {data &&
         data.map((ad: Ad) => {
-          const adImageUrl = new URL(`/public/images/${ad.img}`, import.meta.url).href;
           return (
             <Link
               key={ad.id}
@@ -43,7 +42,12 @@ export default function Ads() {
               </div>
               <div className='ad-image-container'>
                 <div>
-                  <img src={adImageUrl} alt={ad.title} />
+                  <img
+                    src={
+                      new URL(`/public/images/${ad.img}`, import.meta.url).href
+                    }
+                    alt={ad.title}
+                  />
                 </div>
                 <span className='ad-btn'>
                   Rental Car

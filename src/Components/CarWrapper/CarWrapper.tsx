@@ -3,8 +3,7 @@ import CarCard from '../CarCard/CarCard';
 import './CarWrapper.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
-// import { useFetchJson } from '../../Hooks/useFetchJson';
-import { useCarsDb } from '../../Hooks/useCarsDb';
+import CarsJson from './../../../public/db/cars.json';
 
 interface CarWrapper {
   slide?: boolean | undefined;
@@ -32,17 +31,17 @@ interface Car {
 export default function CarWrapper({
   slide,
   title,
-  url,
   filter,
   remove,
   linkTitle,
   link = '/',
 }: CarWrapper) {
   const [cars, setCars] = useState<Car[] | null>(null);
-  const { data, loading } = useCarsDb<Car[]>();
   useEffect(() => {
-    if (filter && data) {
-      const filteredCars = data.filter((car: Car) => car.category === filter);
+    if (filter && CarsJson) {
+      const filteredCars = (CarsJson as unknown as Car[]).filter(
+        (car: Car) => car.category === filter
+      );
       if (remove) {
         const removedTarget = filteredCars.filter(
           (car: Car) => car.name !== remove
@@ -52,9 +51,9 @@ export default function CarWrapper({
         setCars(filteredCars);
       }
     } else {
-      setCars(data);
+      setCars(CarsJson as unknown as Car[]);
     }
-  }, [data, filter, remove]);
+  }, [filter, remove]);
 
   return (
     <div className='car-wrapper'>
@@ -70,9 +69,7 @@ export default function CarWrapper({
         className={`car-wrapper-grid container ${
           slide && 'car-wrapper-slide'
         }`}>
-        {url &&
-          !loading &&
-          Array.isArray(cars) &&
+        {Array.isArray(cars) &&
           cars.map((car: Car) => {
             return (
               <CarCard

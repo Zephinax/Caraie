@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  align-items: stretch;
   gap: 32px;
 }
 
@@ -82,12 +83,6 @@
   }
 }
 
-@media (max-width: 800px) {
-  .ads {
-    padding-top: 0px;
-  }
-}
-
 @media (max-width: 700px) {
   .ads {
     flex-direction: column;
@@ -100,5 +95,11 @@
   .ad-card:nth-child(1) {
     background: var(--primary-blue) url('./../../../public/images/adBg1.png')
       no-repeat center/cover;
+  }
+}
+
+@media (min-width: 1545px) {
+  .ads {
+    justify-content: space-around;
   }
 }
