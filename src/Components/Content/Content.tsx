@@ -2,6 +2,7 @@ import './Content.css';
 import Rating from '../Rating/Rating';
 import Like from '../Like/Like';
 import { Link } from 'react-router-dom';
+import { DecoderText } from '../DecoderText/DecoderText';
 interface Data {
   data: {
     name: string;
@@ -21,7 +22,9 @@ export default function Content(data: Data) {
     <div className='detail-card'>
       <div className='detail-top'>
         <div className='detail-top-left'>
-          <h2 className='detail-name'>{data.data.name}</h2>
+          <h2 className='detail-name'>
+            <DecoderText text={data.data.name} />
+          </h2>
           <Rating />
         </div>
         <div className='detail-top-right'>
