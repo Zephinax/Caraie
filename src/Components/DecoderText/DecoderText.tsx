@@ -99,7 +99,7 @@ export const DecoderText = memo<DecoderTextProps>(
       }
 
       if (reduceMotion) {
-        output.current = content.split('').map((value, index) => ({
+        output.current = content.split('').map((_value, index) => ({
           type: CharType.Value,
           value: content[index],
         }));
