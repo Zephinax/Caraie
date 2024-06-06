@@ -16,6 +16,7 @@ interface cardProps {
   img: string | undefined;
   price: string | undefined;
   discount: string | undefined;
+  isLiked?: string | undefined;
 }
 
 const CarCard = memo(
@@ -29,12 +30,13 @@ const CarCard = memo(
     img,
     price = 'Call',
     discount,
+    isLiked,
   }: cardProps) => {
     return (
       <div className='card-container user-select-none'>
         <div className='card-name-like user-select-none'>
           <h2 className='card-name user-select-none'>{name}</h2>
-          <Like />
+          <Like isLiked={isLiked} />
         </div>
         <p className='car-class user-select-none'>{category}</p>
         {img !== '' ? (

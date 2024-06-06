@@ -26,6 +26,7 @@ interface Car {
   personCapacity: string;
   price: string;
   discount: string;
+  isLiked: string;
 }
 
 export default function CarWrapper({
@@ -83,6 +84,7 @@ export default function CarWrapper({
                 personCapacity={car.personCapacity}
                 price={car.price}
                 discount={car.discount}
+                isLiked={car.isLiked}
               />
             );
           })}

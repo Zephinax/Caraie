@@ -10,7 +10,8 @@
     "price": "110",
     "discount": "",
     "description": "The Koenigsegg is a Swedish hypercar that boasts an incredible 1,340 horsepower and a top speed of over 250 mph. With its sleek and aerodynamic design, this car is a true engineering marvel, combining cutting-edge technology with unparalleled performance. The Koenigsegg is a dream car for any automotive enthusiast, offering an exhilarating driving experience like no other.",
-    "rating": "1"
+    "rating": "1",
+    "isLiked": "true"
   },
   {
     "id": "3",
