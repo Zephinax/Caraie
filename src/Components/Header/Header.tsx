@@ -54,7 +54,7 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <div className='mobile-header-search'>
+      <div className='mobile-header-search container'>
         <button className='header-search-btn tool-tip'>
           <VscSettings />
           <ToolTip style={{ top: 30, left: -30 }} text='Search Setting' />
