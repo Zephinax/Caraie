@@ -19,6 +19,7 @@ interface Car {
   discount: string;
   description: string;
   rating: string;
+  isLiked: string;
 }
 
 export default function CarDetail() {
