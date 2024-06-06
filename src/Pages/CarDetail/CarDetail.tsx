@@ -1,11 +1,10 @@
 import { useLocation } from 'react-router-dom';
-// import { useFetchJson } from '../../Hooks/useFetchJson';
-import { useCarsDb } from '../../Hooks/useCarsDb';
 import { useEffect, useState } from 'react';
 import './CarDetail.css';
 import Gallery from '../../Components/Gallery/Gallery';
 import Content from '../../Components/Content/Content';
 import CarWrapper from '../../Components/CarWrapper/CarWrapper';
+import CarsJson from './../../../public/db/cars.json';
 import LoadingSpiner from '../../Components/LoadingSpiner/LoadingSpiner';
 
 interface Car {
@@ -25,27 +24,21 @@ interface Car {
 export default function CarDetail() {
   const location = useLocation();
   const [targetCar, setTargetCar] = useState<Car | null>(null);
-  // const { data, error, loading } = useFetchJson<Car[]>('/db/Cars.json');
-  const { data, error, loading } = useCarsDb<Car[]>();
   const pathParts = location.pathname.split('/');
   const carId = pathParts[pathParts.length - 1];
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getDetail = () => {
-      if (data && carId) {
-        const car = data.find((car) => car.id === carId);
-        if (car) {
-          setTargetCar(car);
-        }
+    const setTargerCar = async () => {
+      if (CarsJson && carId) {
+        const car = await CarsJson.find((car) => car.id === carId);
+        await setTargetCar(car as Car);
+        setLoading(false);
       }
+      window.scrollTo({ top: 0 });
     };
-
-    getDetail();
-    window.scrollTo({ top: 0 });
-  }, [data, carId]);
-
-  if (loading) return <LoadingSpiner />;
-  if (error) return <div>Error: {error.toString()}</div>;
+    setTargerCar();
+  }, [carId]);
 
   return (
     <>
@@ -53,7 +46,7 @@ export default function CarDetail() {
         {targetCar && <Gallery data={targetCar} />}
         {targetCar && <Content data={targetCar} />}
       </div>
-      {targetCar && (
+      {targetCar && !loading && (
         <CarWrapper
           title='Similar Cars'
           linkTitle='View All'
@@ -63,6 +56,7 @@ export default function CarDetail() {
         />
       )}
       <div style={{ marginBottom: '16px' }}></div>
+      <LoadingSpiner loading={loading} />
     </>
   );
 }

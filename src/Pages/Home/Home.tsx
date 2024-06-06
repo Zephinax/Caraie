@@ -17,15 +17,9 @@ export default function Home() {
         title='Sport Cars'
         linkTitle='View All'
         link='/Category'
-        url='Cars.json'
         filter='Sport'
       />
-      <CarWrapper
-        title='All Cars'
-        linkTitle='View All'
-        link='/Category'
-        url='Cars.json'
-      />
+      <CarWrapper title='All Cars' linkTitle='View All' link='/Category' />
     </div>
   );
 }
