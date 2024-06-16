@@ -2,7 +2,7 @@ import './Content.css';
 import Rating from '../Rating/Rating';
 import Like from '../Like/Like';
 import { Link } from 'react-router-dom';
-import { DecoderText } from '../DecoderText/DecoderText';
+import DecoderText from '../DecoderText/DecoderText';
 interface Data {
   data: {
     name: string;

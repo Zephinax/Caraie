@@ -1,28 +1,11 @@
 import { VisuallyHidden } from '../VisuallyHidden/VisuallyHidden';
-import { MotionValue, useReducedMotion, useSpring } from 'framer-motion';
-import { memo, useEffect, useRef } from 'react';
+import { useReducedMotion, useSpring } from 'framer-motion';
+import { useEffect, useRef, memo } from 'react';
 import { delay } from './../../Utils/delay';
 import { classes } from './../../Utils/style';
 import styles from './decoder-text.module.css';
 
-// prettier-ignore
-const glyphs = [
-  'ア', 'イ', 'ウ', 'エ', 'オ',
-  'カ', 'キ', 'ク', 'ケ', 'コ',
-  'サ', 'シ', 'ス', 'セ', 'ソ',
-  'タ', 'チ', 'ツ', 'テ', 'ト',
-  'ナ', 'ニ', 'ヌ', 'ネ', 'ノ',
-  'ハ', 'ヒ', 'フ', 'ヘ', 'ホ',
-  'マ', 'ミ', 'ム', 'メ', 'モ',
-  'ヤ', 'ユ', 'ヨ', 'ー',
-  'ラ', 'リ', 'ル', 'レ', 'ロ',
-  'ワ', 'ヰ', 'ヱ', 'ヲ', 'ン',
-  'ガ', 'ギ', 'グ', 'ゲ', 'ゴ',
-  'ザ', 'ジ', 'ズ', 'ゼ', 'ゾ',
-  'ダ', 'ヂ', 'ヅ', 'デ', 'ド',
-  'バ', 'ビ', 'ブ', 'ベ', 'ボ',
-  'パ', 'ピ', 'プ', 'ペ', 'ポ',
-];
+const glyphs = [...Array(94)].map((_, i) => String.fromCharCode(i + 0x30a0));
 
 const CharType = {
   Glyph: 'glyph',
@@ -46,12 +29,12 @@ function shuffle(
       return { type: CharType.Value, value };
     }
 
-    if (position % 1 < 0.5) {
-      const rand = Math.floor(Math.random() * glyphs.length);
-      return { type: CharType.Glyph, value: glyphs[rand] };
-    }
+    const isGlyph = position % 1 < 0.5;
+    const glyphValue = isGlyph
+      ? glyphs[Math.floor(Math.random() * glyphs.length)]
+      : output[index].value;
 
-    return { type: CharType.Glyph, value: output[index].value };
+    return { type: CharType.Glyph, value: glyphValue };
   });
 }
 
@@ -62,9 +45,9 @@ interface DecoderTextProps {
   className?: string;
 }
 
-export const DecoderText = memo<DecoderTextProps>(
+const DecoderText = memo<DecoderTextProps>(
   ({ text, start = true, delay: startDelay = 0, className, ...rest }) => {
-    const output = useRef<Character[]>([{ type: CharType.Glyph, value: '' }]);
+    const output = useRef<Character[]>([]);
     const container = useRef<HTMLSpanElement>(null);
     const reduceMotion = useReducedMotion();
     const decoderSpring = useSpring(0, { stiffness: 8, damping: 5 });
@@ -72,19 +55,20 @@ export const DecoderText = memo<DecoderTextProps>(
     useEffect(() => {
       const containerInstance = container.current;
       const content = text;
-      let animation: MotionValue<number> | undefined;
+      let animation: ReturnType<typeof setTimeout> | undefined;
 
       const renderOutput = () => {
-        const characterMap = output.current.map((item) => {
-          return `<span class="${styles[item.type]}">${item.value}</span>`;
-        });
-
         if (containerInstance) {
-          containerInstance.innerHTML = characterMap.join('');
+          containerInstance.innerHTML = output.current
+            .map(
+              ({ type, value }) =>
+                `<span class="${styles[type]}">${value}</span>`
+            )
+            .join('');
         }
       };
 
-      const unsubscribeSpring = decoderSpring.on('change', (value) => {
+      const unsubscribeSpring = decoderSpring.onChange((value) => {
         output.current = shuffle(content, output.current, value);
         renderOutput();
       });
@@ -108,6 +92,7 @@ export const DecoderText = memo<DecoderTextProps>(
 
       return () => {
         unsubscribeSpring?.();
+        animation && clearTimeout(animation);
       };
     }, [decoderSpring, reduceMotion, start, startDelay, text]);
 
@@ -117,5 +102,15 @@ export const DecoderText = memo<DecoderTextProps>(
         <span aria-hidden className={styles.content} ref={container} />
       </span>
     );
+  },
+  (prevProps, nextProps) => {
+    return (
+      prevProps.text === nextProps.text &&
+      prevProps.start === nextProps.start &&
+      prevProps.delay === nextProps.delay &&
+      prevProps.className === nextProps.className
+    );
   }
 );
+
+export default DecoderText;
