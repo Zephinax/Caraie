@@ -16,6 +16,11 @@
 .footer-logo {
   width: clamp(50px, 100%, 200px);
   margin-bottom: 16px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .footer-top-left {
