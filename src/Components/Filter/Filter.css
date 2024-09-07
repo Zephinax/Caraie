@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 44px;
+  gap: 30px;
   font-size: 10px;
 }
 
@@ -12,8 +12,8 @@
   width: 100%;
   background: var(--secondary-bg);
   border-radius: 10px;
-  padding: 24px 48px;
-  box-shadow: rgba(0, 0, 0, 0.025) 0px 5px 10px;
+  padding: 24px 28px;
+  box-shadow: #00000006 0px 5px 10px;
   transition: all 0.3s linear;
 }
 
@@ -96,7 +96,7 @@
 
 .filter-options h2 {
   font-size: 1.6em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .filter-options h3 {

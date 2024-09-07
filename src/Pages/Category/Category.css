@@ -1,0 +1,179 @@
+.category-container {
+  display: flex;
+  min-height: 100vh;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.category-selector {
+  flex: 1;
+  padding: 32px;
+  padding-right: 0;
+  height: 100%;
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+}
+
+.category-cars {
+  flex: 6;
+  height: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.category-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+}
+
+.category-title {
+  color: var(--secondary-text);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* From Uiverse.io by Li-Deheng */
+.card-conteiner {
+  cursor: default;
+  --color-primary: #275efe;
+  --color-headline: #3f4656;
+  --color-text: #99a3ba;
+}
+
+.card-content {
+  width: 100%;
+  max-width: 312px;
+  border-radius: 10px;
+}
+
+.card-content .card-title {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: var(--color-headline);
+}
+
+.card-content .card-title span {
+  font-weight: 500;
+}
+
+.card-content .values div,
+.card-content .current-range div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card-content .values {
+  margin: 0;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.card-content .values > div:first-child {
+  margin-right: 2px;
+}
+
+.card-content .values > div:last-child {
+  margin-left: 2px;
+}
+
+.card-content .current-range {
+  display: block;
+  color: var(--color-text);
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.card-content .slider {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 0.6em;
+  color: var(--color-text);
+}
+
+/* Range Slider */
+.input-ranges[type='range'] {
+  width: 210px;
+  height: 30px;
+  overflow: hidden;
+  outline: none;
+}
+
+.input-ranges[type='range'],
+.input-ranges[type='range']::-webkit-slider-runnable-track,
+.input-ranges[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: none;
+}
+
+.input-ranges[type='range']::-webkit-slider-runnable-track {
+  width: 200px;
+  height: 1px;
+  background: var(--color-headline);
+}
+
+.input-ranges[type='range']:nth-child(2)::-webkit-slider-runnable-track {
+  background: none;
+}
+
+.input-ranges[type='range']::-webkit-slider-thumb {
+  position: relative;
+  height: 15px;
+  width: 15px;
+  margin-top: -7px;
+  background: #fff;
+  border: 1px solid var(--color-headline);
+  border-radius: 25px;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.input-ranges[type='range']::-webkit-slider-thumb:hover {
+  background: #eaefff;
+  border: 1px solid var(--color-primary);
+  outline: 0.5px solid var(--color-primary);
+}
+
+.input-ranges[type='range']::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+
+.input-ranges[type='range']:nth-child(1)::-webkit-slider-thumb {
+  z-index: 2;
+}
+
+.rangeslider {
+  font-family: sans-serif;
+  font-size: 14px;
+  position: relative;
+  height: 20px;
+  width: 210px;
+  display: inline-block;
+  margin-top: -5px;
+}
+
+.rangeslider input {
+  position: absolute;
+}
+
+.rangeslider span {
+  position: absolute;
+  margin-top: 20px;
+  left: 0;
+}
+
+.rangeslider .right {
+  position: relative;
+  float: right;
+  margin-right: -5px;
+}

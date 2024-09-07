@@ -1,12 +1,14 @@
-import "./Filter.css";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { HiArrowsUpDown } from "react-icons/hi2";
+import './Filter.css';
+import { MdKeyboardArrowDown } from 'react-icons/md';
+import { HiArrowsUpDown } from 'react-icons/hi2';
+import { useState } from 'react';
 export default function Filter() {
+  const [reverse, setReverse] = useState(false);
   return (
     <div className='filter container'>
       <div className='pick-up'>
         <div className='filter-title'>
-          <div className='filter-circle active-circle'>
+          <div className={`filter-circle ${!reverse ? 'active-circle' : ''}`}>
             <div></div>
           </div>
           <h1>Pick - Up</h1>
@@ -25,7 +27,7 @@ export default function Filter() {
               <h3>Select your city</h3>
               <MdKeyboardArrowDown size={18} />
             </div>
-          </a>{" "}
+          </a>{' '}
           <a className='filter-option-selector'>
             <h2>Time</h2>
             <div className='filter-option-wrapper'>
@@ -35,12 +37,12 @@ export default function Filter() {
           </a>
         </div>
       </div>
-      <div className='filter-reverse'>
+      <div className='filter-reverse' onClick={() => setReverse(!reverse)}>
         <HiArrowsUpDown size={28} />
       </div>
       <div className='drop-off'>
         <div className='filter-title'>
-          <div className='filter-circle'>
+          <div className={`filter-circle ${reverse ? 'active-circle' : ''}`}>
             <div></div>
           </div>
           <h1>Drop - Off</h1>
@@ -59,7 +61,7 @@ export default function Filter() {
               <h3>Select your date</h3>
               <MdKeyboardArrowDown size={18} />
             </div>
-          </a>{" "}
+          </a>{' '}
           <a className='filter-option-selector'>
             <h2>Time</h2>
             <div className='filter-option-wrapper'>
