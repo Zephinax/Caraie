@@ -7,13 +7,6 @@ import insidePic13 from './../../../public/Images/carsInside/Carinside3.jpg';
 import insidePic14 from './../../../public/Images/carsInside/Carinside4.jpg';
 import './Gallery.css';
 
-interface Car {
-  img: String;
-}
-interface GalleryProps {
-  data: Car;
-}
-
 const images = [
   {
     original: insidePic11,
