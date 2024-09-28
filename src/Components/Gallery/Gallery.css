@@ -47,3 +47,19 @@
   display: flex;
   gap: 16px;
 }
+
+.image-gallery-slide-wrapper {
+  border-radius: 10px !important;
+  overflow: hidden;
+  max-height: 600px;
+  aspect-ratio: 16/9;
+}
+
+.image-gallery-icon:hover {
+  color: var(--primary-blue) !important;
+}
+
+.image-gallery-thumbnail {
+  border-radius: 10px !important;
+  overflow: hidden;
+}
