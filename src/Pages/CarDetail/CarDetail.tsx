@@ -44,7 +44,7 @@ export default function CarDetail() {
   return (
     <>
       <div className='detail-wrapper container'>
-        {targetCar && <Gallery data={targetCar} />}
+        {targetCar && <Gallery />}
         {targetCar && <Content data={targetCar} />}
       </div>
       {targetCar && !loading && (

@@ -32,11 +32,11 @@ const images = [
     thumbnail: insidePic14,
   },
 ];
-export default function Gallery(props: GalleryProps) {
+export default function Gallery() {
   // const [mainImage] = useState('default');۱
   // const carAssets = [1, 2, 3];
 
-  const [galleryImages, setGalleryImages] = useState(images);
+  const [galleryImages] = useState(images);
   return (
     // <div className='gallery-wrapper user-select-none'>
     //   <div className='main-img'>
